@@ -237,7 +237,7 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
               transition={{ duration: 0.25, ease: "easeInOut" }}
               className="flex items-center justify-center h-4 w-4"
             >
-              <ChevronDown className="h-3 w-3 rotate-[-90deg]" />
+              <ChevronDown className="h-3 w- rotate-[-90deg]" />
             </motion.span>
           </motion.button>
 
@@ -249,11 +249,11 @@ const SegmentCard = ({ segment, index, onDetails, onRulebook }) => {
             whileHover={{ scale: 1.04, y: -1 }}
             whileTap={{ scale: 0.96 }}
             className="
-              inline-flex items-center justify-center gap-2
+              flex-1 inline-flex items-center justify-center gap-2
               rounded-full px-3 py-2.5
               text-xs sm:text-sm font-semibold
-              bg-gradient-to-r from-[#fed685] via-[#f0ca7c] to-[#febe3e]
-              text-[#2e2504]
+              bg-gradient-to-r from-[#31010b] via-[#3f0202] to-[#31010b]
+              text-[#e3deca]
               border border-[#F5bb46]/70
               shadow-[0_8px_25px_rgba(0,0,0,0.7)]
               hover:shadow-[0_0_25px_rgba(150,110,80,0.5)]
