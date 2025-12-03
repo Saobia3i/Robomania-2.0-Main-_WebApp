@@ -15,6 +15,15 @@ import Supporting from './Main_pages/Partners/Supporting.jsx';
 import { DotBackground } from './components/ui/DotBackground.jsx';
 import Footer from './Footer.jsx';
 import Contact from './Main_pages/Contact.jsx';
+
+
+import SoccerBot from './Main_pages/segment_details/SoccerBot.jsx';
+import LineFollowingRobot from './Main_pages/segment_details/LineFollowingRobot';
+import InnovatorsArena from './Main_pages/segment_details/InnovatorsArena';
+import CircuitWizardry from './Main_pages/segment_details/CircuitWizardry';
+import Cadyssey from './Main_pages/segment_details/Cadyssey';
+import RoboProjectHackathon from './Main_pages/segment_details/RoboProjectHackathon';
+import ADCanvas from './Main_pages/segment_details/ADCanvas';
 function App() {
   return (
    <BrowserRouter>
@@ -31,6 +40,13 @@ function App() {
             <Route path="/segments" element={<Segments/>} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/contact" element ={<Contact/>}/>
+            <Route path="/segment/soccer-bot" element={<SoccerBot />} />
+            <Route path="/segment/line-following-robot" element={<LineFollowingRobot />} />
+            <Route path="/segment/innovators-arena" element={<InnovatorsArena />} />
+            <Route path="/segment/circuit-wizardry" element={<CircuitWizardry />} />
+            <Route path="/segment/cadyssey" element={<Cadyssey />} />
+            <Route path="/segment/roboproject-hackathon" element={<RoboProjectHackathon />} />
+            <Route path="/segment/adcanvas" element={<ADCanvas />} />
           </Routes>
         </div>
         <Footer/>
