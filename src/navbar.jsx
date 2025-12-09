@@ -29,6 +29,7 @@ export default function Navbar(){
     { name: "Home", link: "/" },
     { name: "Partners", link: "/partners/premier" },
     { name: "Segments", link: "/segments" },
+    { name: "Our Gross Reach", link: "/our-gross-reach" },
     { name: "About Us", link: "/aboutus" },
     { name: "Contact Us", link: "/contact" },
     { name: "Register Now", link: "/register" },

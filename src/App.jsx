@@ -15,7 +15,6 @@ import Supporting from './Main_pages/Partners/Supporting.jsx';
 import { DotBackground } from './components/ui/DotBackground.jsx';
 import Footer from './Footer.jsx';
 import Contact from './Main_pages/Contact.jsx';
-import Register from './Main_pages/Register.jsx';
 
 
 import SoccerBot from './Main_pages/segment_details/SoccerBot.jsx';
@@ -39,9 +38,9 @@ function App() {
             <Route path="/partners/premier" element={<Premium/>} />
             <Route path="/partners/supporting" element={<Supporting/>} />
             <Route path="/segments" element={<Segments/>} />
+            <Route path="/our-gross-reach" element={<OurGrossReach />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/contact" element ={<Contact/>}/>
-            <Route path="/register" element={<Register />} />
             <Route path="/segment/soccer-bot" element={<SoccerBot />} />
             <Route path="/segment/line-following-robot" element={<LineFollowingRobot />} />
             <Route path="/segment/innovators-arena" element={<InnovatorsArena />} />

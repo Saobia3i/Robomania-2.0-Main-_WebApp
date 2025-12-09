@@ -11,7 +11,6 @@ import {
   Sparkles,
   Layers,
 } from "lucide-react";
-import  OurGrossReach  from "./OurGrossReach.jsx";
 import PrevEvents from "./PrevEvents.jsx";
 const container = {
   hidden: { opacity: 0, y: 24 },
@@ -134,7 +133,7 @@ const PreviousEvents = [
 
 const About = () => {
   return (
-    <div className="space-y-20 pb-20 px-4 md:px-6 lg:px-10 font-noto-kr">
+    <div className="space-y-20 pb-8 px-4 md:px-6 lg:px-10 font-noto-kr">
       {/* HERO / ABOUT AUSTRC */}
       <section className="pt-10 md:pt-16">
         <motion.div
@@ -385,25 +384,21 @@ const About = () => {
         </motion.div>
       </section>
 
-<section className="mx-auto max-w-6xl">
-
-  <motion.div
-    variants={container}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true, amount: 0.3 }}
-    className="space-y-6"
-  >
-    {/* Heading */}
-    <OurGrossReach />
-
-
-      <div className="mx-auto max-w-6xl  gap-10 rounded-3xl border border-[#554110] p-6 backdrop-blur-md md:flex-row md:p-10">
-        <PrevEvents />
-      </div>
-  </motion.div>
-</section>
-
+      {/* PREVIOUS EVENTS */}
+      <section className="mx-auto max-w-6xl">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="space-y-6"
+        >
+          {/* Previous Events */}
+          <div className="mx-auto max-w-6xl gap-10 rounded-3xl border border-[#554110] p-3 backdrop-blur-md md:p-4">
+            <PrevEvents />
+          </div>
+        </motion.div>
+      </section>
     </div>
   );
 };
