@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAr1nZVPZX_EJFD_m__MQ_OQyl1JW1APdQ",
   authDomain: "robomania-main-app.firebaseapp.com",
   projectId: "robomania-main-app",
-  storageBucket: "robomania-main-app.firebasestorage.app",
+  storageBucket: "robomania-main-app.appspot.com",
   messagingSenderId: "419732256688",
   appId: "1:419732256688:web:7c3be0d0165409b8c04875",
   measurementId: "G-EBZJMGEQ5B"
