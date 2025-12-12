@@ -5,7 +5,17 @@ import { setDoc, doc, getDoc } from "firebase/firestore";
 import { IconAlertCircle, IconCheck } from "@tabler/icons-react";
 
 const soloSegments = ["Cadyssey", "Circuit Wizardry"];
-const teamSegments = ["Soccer Bot", "Line Following Robot", "Innovators' Arena"];
+const teamSegments = ["Soccer Bot", "Line Following Robot", "RoboProject Hackathon", "Robo Olympiad"];
+
+// Google Forms URLs for each segment
+const googleFormsLinks = {
+  "Cadyssey": "https://forms.gle/8BunRjjdnAf2ev8NA",
+  "Circuit Wizardry": "https://forms.gle/TAb5TsSbuqzjJbec8",
+  "Soccer Bot": "https://forms.gle/ZDTYup7aJHRs1vHu5",
+  "Line Following Robot": "https://forms.gle/vEK2PBbLqTMDodmX8",
+  "RoboProject Hackathon": "https://forms.gle/XjGvtc4FjBHk8jrq9",
+  "Robo Olympiad": "https://forms.gle/WToS83Q4pWZUTnUR7",
+};
 const teamMemberOptions = [
   { value: 1, label: "1 Member" },
   { value: 2, label: "2 Members" },
@@ -268,14 +278,10 @@ export default function Register() {
   }, [selectedSegment, segmentType]);
 
   const handleSegmentSelect = (segment) => {
-    setSelectedSegment(segment);
-    const type = soloSegments.includes(segment) ? "solo" : "team";
-    setSegmentType(type);
-
-    if (type === "team") {
-      setStep(2);
-    } else {
-      setStep(3);
+    // Redirect to the corresponding Google Form
+    const formUrl = googleFormsLinks[segment];
+    if (formUrl) {
+      window.open(formUrl, "_blank");
     }
   };
 
