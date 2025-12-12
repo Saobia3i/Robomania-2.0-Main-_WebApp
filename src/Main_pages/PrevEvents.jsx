@@ -363,7 +363,7 @@ const PrevEvents = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   return (
-    <section className="min-h-screen px-3 sm:px-4 py-8 sm:py-12 bg-black/40 backdrop-blur-lg">
+    <section className="px-3 sm:px-4 py-4 sm:py-6 bg-transparent">
       {/* Compact Header */}
       <motion.div
         initial={{ opacity: 0, y: -15 }}

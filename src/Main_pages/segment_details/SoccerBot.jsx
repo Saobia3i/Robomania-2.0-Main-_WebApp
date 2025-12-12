@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu } from "lucide-react";
+import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const SoccerBot = () => {
@@ -22,7 +22,10 @@ const SoccerBot = () => {
       "3v3 style autonomous robot matches with live commentary.",
       "Real-time decision-making using sensors, control loops or AI.",
       "Stadium-like experience with cheering zones and live score display."
-    ]
+    ],
+    schedule: "Day 2, 10:00 AM - 2:00 PM",
+    place: "Main Arena, Block A",
+    registrationDeadline: "Dec 15, 2025"
   };
 
   return (
@@ -130,7 +133,7 @@ const SoccerBot = () => {
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.18, duration: 0.35 }}
-                  className="grid grid-cols-2 sm:grid-cols-3 gap-3"
+                  className="grid grid-cols-2 sm:grid-cols-4 gap-3"
                 >
                   {segment.prizePool && (
                     <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
@@ -148,37 +151,69 @@ const SoccerBot = () => {
                     </div>
                   )}
 
-                  {segment.expectedTeams && (
-                    <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
-                        <Users className="h-4 w-4 text-[#1AB7AA]" />
+                  {segment.schedule && (
+                    <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
+                        <Calendar className="h-4 w-4 text-[#F5CB7A]" />
                       </div>
                       <div className="space-y-0.5">
                         <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                          Expected Teams
+                          Schedule
                         </p>
-                        <p className="text-sm font-semibold text-[#CCF5EE]">
-                          {segment.expectedTeams}
+                        <p className="text-sm font-semibold text-[#F5CB7A]">
+                          {segment.schedule}
                         </p>
                       </div>
                     </div>
                   )}
 
-                  {segment.difficulty && (
-                    <div className="rounded-2xl border border-[#D1BA83]/35 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#D1BA83]/10">
-                        <Target className="h-4 w-4 text-[#D1BA83]" />
+                  {segment.place && (
+                    <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
+                        <MapPin className="h-4 w-4 text-[#1AB7AA]" />
                       </div>
                       <div className="space-y-0.5">
                         <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                          Difficulty
+                          Place
                         </p>
-                        <p className="text-sm font-semibold text-neutral-100">
-                          {segment.difficulty}
+                        <p className="text-sm font-semibold text-[#CCF5EE]">
+                          {segment.place}
                         </p>
                       </div>
                     </div>
                   )}
+
+                {segment.registrationDeadline && (
+                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                      <Clock className="h-4 w-4 text-red-500" />
+                    </div>
+                    <div className="space-y-0.5">
+                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                        Registration Deadline
+                      </p>
+                      <p className="text-sm font-semibold text-red-500">
+                        {segment.registrationDeadline}
+                      </p>
+                    </div>
+                  </div>
+                )}                </motion.div>
+
+                {/* Action buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.24, duration: 0.35 }}
+                  className="mt-6 flex flex-wrap gap-3 sm:gap-4"
+                >
+                  <button className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                    <BookOpen className="h-4 w-4" />
+                    Rule Book
+                  </button>
+                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2">
+                    <UserPlus className="h-4 w-4" />
+                    Enroll Now
+                  </button>
                 </motion.div>
               </div>
             </div>
