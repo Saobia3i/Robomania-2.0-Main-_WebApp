@@ -81,11 +81,11 @@ const segmentsData = [
       "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     schedule: "Day 3, 9:00 AM - 12:00 PM",
     place: "TT Ground",
-    registrationDeadline: "Dec 17, 2025",
+    registrationDeadline: "27 December, 2025",
     prizePool: "20,000",
     description:
       "An exciting multi-event robotics competition that challenges teams to excel across diverse robotic disciplines. Teams compete in various categories showcasing skills in automation, precision, and innovation. This ultimate robotics challenge brings together the best robotic talents for an unforgettable experience.",
-    rulebookLink: "#", // Update this with actual rulebook link
+    rulebookLink: "https://tinyurl.com/Robo-Olympiad", // Update this with actual rulebook link
   },
 ];
 

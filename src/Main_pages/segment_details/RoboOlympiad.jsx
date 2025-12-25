@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Calendar, MapPin, Clock, Cpu, BookOpen, UserPlus, X } from "lucide-react";
+import {
+  ChevronLeft,
+  Trophy,
+  Calendar,
+  MapPin,
+  Clock,
+  Cpu,
+  BookOpen,
+  UserPlus,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const RoboOlympiad = () => {
   const navigate = useNavigate();
   const [showComingSoon, setShowComingSoon] = useState(false);
 
-  const googleFormsLink = "https://forms.gle/WToS83Q4pWZUTnUR7";
+  const googleFormsLink = "https://registration.austrc.com/Robo-olympiad";
 
   const segment = {
     id: 8,
@@ -15,18 +25,21 @@ const RoboOlympiad = () => {
     badge: "Ultimate Robotics Challenge",
     category: "Multi-Event Competition · Team Strategy",
     prizePool: "To be Announced",
-    image: "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
-    tagline: "A multi-event robotics competition that challenges teams to excel across diverse robotic disciplines.",
-    detailedDescription: "The Robot Olympiad is the knowledge-driven segment of Robomania 2.0, designed to test the intellectual depth, analytical thinking, and technical understanding of individuals passionate about robotics, automation, and artificial intelligence. This solo competition is crafted to evaluate not just what you know—but how you apply it. If you’re confident in your concepts, theories, and problem-solving skills, the Robot Olympiad is your arena.",
+    image:
+      "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
+    tagline:
+      "A multi-event robotics competition that challenges teams to excel across diverse robotic disciplines.",
+    detailedDescription:
+      "The Robot Olympiad is the knowledge-driven segment of Robomania 2.0, designed to test the intellectual depth, analytical thinking, and technical understanding of individuals passionate about robotics, automation, and artificial intelligence. This solo competition is crafted to evaluate not just what you know—but how you apply it. If you’re confident in your concepts, theories, and problem-solving skills, the Robot Olympiad is your arena.",
     highlights: [
       "Multiple events showcasing different robotics disciplines and skills.",
       "Emphasis on innovation, precision, and team coordination.",
       "Competitive environment with top teams recognized and awarded.",
-      "Opportunities for networking with fellow robotics enthusiasts."
+      "Opportunities for networking with fellow robotics enthusiasts.",
     ],
     schedule: "To be Announced",
     place: "To be Announced",
-    registrationDeadline: "To be Announced"
+    registrationDeadline: "27 December,2025",
   };
 
   return (
@@ -104,8 +117,11 @@ const RoboOlympiad = () => {
                 </div>
 
                 <p className="relative mt-3 text-[11px] text-neutral-300/80 leading-snug">
-                  Designed visual for <span className="text-[#F5CB7A] font-semibold">{segment.name}</span> —
-                  as seen in Robomania 2.0 branding.
+                  Designed visual for{" "}
+                  <span className="text-[#F5CB7A] font-semibold">
+                    {segment.name}
+                  </span>{" "}
+                  — as seen in Robomania 2.0 branding.
                 </p>
               </motion.div>
 
@@ -208,11 +224,19 @@ const RoboOlympiad = () => {
                   transition={{ delay: 0.24, duration: 0.35 }}
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
-                  <button onClick={() => setShowComingSoon(true)} className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                  <a
+                    href="https://tinyurl.com/Robo-Olympiad"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
                     <BookOpen className="h-4 w-4" />
                     Rule Book
-                  </button>
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
+                  </a>
+                  <button
+                    className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
+                    onClick={() => window.open(googleFormsLink, "_blank")}
+                  >
                     <UserPlus className="h-4 w-4" />
                     Register Now
                   </button>
@@ -305,14 +329,18 @@ const RoboOlympiad = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                  The rule book for this segment is being prepared with all the
+                  exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete ruleset and competition guidelines.
+                  Check back soon for the complete ruleset and competition
+                  guidelines.
                 </p>
 
                 <motion.button
