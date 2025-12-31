@@ -893,7 +893,7 @@ const Home = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2026-01-03T00:00:00"); // local time
+    const targetDate = new Date("2026-01-17T00:00:00"); // local time
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -1017,7 +1017,7 @@ const Home = () => {
                 className="relative z-10 mt-8 flex flex-col items-center gap-4"
               >
                 <span className="text-xs sm:text-sm uppercase tracking-[0.25em] text-amber-200/80">
-                  Event starts in · 3 January 2026
+                  Event starts in · 17 January 2026
                 </span>
 
                 <div className="flex flex-wrap justify-center gap-3 sm:gap-4">

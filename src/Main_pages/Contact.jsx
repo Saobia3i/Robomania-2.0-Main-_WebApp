@@ -319,7 +319,7 @@ const Contact = () => {
                   role="Website Development Team"
                   
                   email="islamsaobia@gmail.com"
-                  image="https://ik.imagekit.io/mekt2pafz/Web%20site%20team/22222.jpg"
+                  image="https://ik.imagekit.io/ekb0d0it0/IMG_20250112_192207_122(1).jpg"
                   icon={<Globe className="w-5 h-5" />}
                   linkedin="https://www.linkedin.com/in/saobia-islam-1b173b284/"
                 />
