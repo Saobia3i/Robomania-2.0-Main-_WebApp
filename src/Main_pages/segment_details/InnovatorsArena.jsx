@@ -24,7 +24,7 @@ const InnovatorsArena = () => {
       "Sponsors can directly interact with teams and short-list talent."
     ],
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026"
   };
 

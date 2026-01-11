@@ -19,7 +19,7 @@ const segmentsData = [
     category: "Autonomous Robotics · Game AI",
     image: "https://ik.imagekit.io/mekt2pafz/SoccerBot.png",
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/SoccerBot-Rlbk", // Update this with actual rulebook link
   },
@@ -31,7 +31,7 @@ const segmentsData = [
     category: "Embedded Systems · Control",
     image: "https://ik.imagekit.io/mekt2pafz/LineFollowingRobot.png",
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/LFR-Rulebook", // Update this with actual rulebook link
   },
@@ -43,7 +43,7 @@ const segmentsData = [
     category: "Electronics · Circuit Design",
     image: "https://ik.imagekit.io/mekt2pafz/CIRCUITWizardy.png",
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/Circuit-Wizardry", // Update this with actual rulebook link
   },
@@ -55,7 +55,7 @@ const segmentsData = [
     category: "CAD · Product Design",
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/CADyssey", // Update this with actual rulebook link
   },
@@ -67,7 +67,7 @@ const segmentsData = [
     category: "Hackathon · Rapid Prototyping",
     image: "https://ik.imagekit.io/mekt2pafz/RoboProjectHackathon(2).png",
     schedule: "To be Announced",
-    place: "To be Announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     rulebookLink: "https://tinyurl.com/RoboProject-Hackathon", // Update this with actual rulebook link
   },
@@ -80,7 +80,7 @@ const segmentsData = [
     image:
       "https://ik.imagekit.io/mekt2pafz/Robomania%202.0/robo%20olympiad.png?updatedAt=1765578419230",
     schedule: "To be Announced",
-    place: "To be announced",
+    place: "AUST Campus",
     registrationDeadline: "12 January, 2026",
     prizePool: "To be Announced",
     description:

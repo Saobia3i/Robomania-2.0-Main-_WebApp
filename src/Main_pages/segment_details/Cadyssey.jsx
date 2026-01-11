@@ -1,6 +1,18 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, Trophy, Users, Target, Cpu, BookOpen, UserPlus, Calendar, MapPin, Clock, X } from "lucide-react";
+import {
+  ChevronLeft,
+  Trophy,
+  Users,
+  Target,
+  Cpu,
+  BookOpen,
+  UserPlus,
+  Calendar,
+  MapPin,
+  Clock,
+  X,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Cadyssey = () => {
@@ -18,17 +30,20 @@ const Cadyssey = () => {
     expectedTeams: "20–25 designers",
     difficulty: "Intermediate – Advanced",
     image: "https://ik.imagekit.io/mekt2pafz/Cadyssey.png",
-    tagline: "Turn engineering imagination into precise, manufacturable digital models.",
-    shortDescription: "Showcase your 2D/3D CAD skills by modeling functional mechanical or electro-mechanical systems with clarity and detail.",
-    detailedDescription: "Cadyssey challenges participants to interpret design briefs and transform them into structured CAD models — focusing on constraints, assemblies, motion and real-world manufacturability. Whether it's a robotic arm, gearbox or fixture, the segment highlights design thinking and attention to engineering detail. Sponsors can connect with future design engineers and CAD-ready talent.",
+    tagline:
+      "Turn engineering imagination into precise, manufacturable digital models.",
+    shortDescription:
+      "Showcase your 2D/3D CAD skills by modeling functional mechanical or electro-mechanical systems with clarity and detail.",
+    detailedDescription:
+      "Cadyssey challenges participants to interpret design briefs and transform them into structured CAD models — focusing on constraints, assemblies, motion and real-world manufacturability. Whether it's a robotic arm, gearbox or fixture, the segment highlights design thinking and attention to engineering detail. Sponsors can connect with future design engineers and CAD-ready talent.",
     highlights: [
       "Timed modeling based on real engineering problem statements.",
       "Judging based on accuracy, constraints, clarity and documentation.",
-      "Valuable for companies looking for design-oriented recruits."
+      "Valuable for companies looking for design-oriented recruits.",
     ],
     schedule: "To be Announced",
-    place: "To be Announced",
-    registrationDeadline: "12 January, 2026"
+    place: "AUST Campus",
+    registrationDeadline: "12 January, 2026",
   };
 
   return (
@@ -99,8 +114,11 @@ const Cadyssey = () => {
                 </div>
 
                 <p className="relative mt-3 text-[11px] text-neutral-300/80 leading-snug">
-                  Designed visual for <span className="text-[#F5CB7A] font-semibold">{segment.name}</span> —
-                  as seen in Robomania 2.0 branding.
+                  Designed visual for{" "}
+                  <span className="text-[#F5CB7A] font-semibold">
+                    {segment.name}
+                  </span>{" "}
+                  — as seen in Robomania 2.0 branding.
                 </p>
               </motion.div>
 
@@ -122,28 +140,113 @@ const Cadyssey = () => {
                   )}
                 </motion.div>
 
+                {/* Compact Prize Pool Card (with shimmer + larger text/icons) */}
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.16, duration: 0.35 }}
+                  className="mb-6 flex justify-center"
+                >
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    transition={{ type: "spring", stiffness: 220, damping: 18 }}
+                    className="group relative w-full max-w-sm overflow-hidden rounded-2xl
+                               border border-[#F5CB7A]/50 bg-black/50
+                               shadow-[0_0_45px_rgba(245,203,122,0.18)]
+                               px-4 py-3.5"
+                  >
+                    {/* Soft glow */}
+                    <div
+                      className="pointer-events-none absolute -inset-0.5 rounded-2xl
+                                 bg-gradient-to-br from-[#F5CB7A]/20 via-transparent to-[#1AB7AA]/20
+                                 opacity-40 blur-xl"
+                    />
+
+                    <motion.div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute -inset-y-1/2 -left-1/2 w-1/2
+                             bg-gradient-to-r from-transparent via-white/12 to-transparent
+                             rotate-[-18deg] opacity-60"
+                      initial={{ x: "-120%", y: "0%" }}
+                      animate={{
+                        x: ["-120%", "220%"],
+                        y: ["-10%", "10%"],
+                      }}
+                      transition={{
+                        duration: 3.2,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    />
+
+                    {/* Header */}
+                    <div className="relative text-center">
+                      <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-300/70">
+                        Prize Pool
+                      </p>
+                      <div className="mx-auto mt-1 h-px w-20 border-t border-dashed border-[#F5CB7A]/55" />
+                    </div>
+
+                    {/* Champion */}
+                    <div className="relative mt-3.5 flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#F5CB7A]/15">
+                          <Trophy className="h-5 w-5 text-[#F5CB7A]" />
+                        </div>
+                        <p className="text-[15px] font-semibold text-[#F5CB7A]">
+                          Champion
+                        </p>
+                      </div>
+
+                      <p className="text-xl font-extrabold text-[#F5CB7A]">
+                        2,500{" "}
+                        <span className="text-xs font-semibold text-neutral-300">
+                          BDT
+                        </span>
+                      </p>
+                    </div>
+
+                    {/* Separator */}
+                    <div className="relative mx-auto my-3.5 h-px w-full border-t border-dashed border-[#F5CB7A]/30" />
+
+                    {/* Runner-up */}
+                    <div className="relative flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1AB7AA]/15">
+                          <Trophy className="h-5 w-5 text-[#1AB7AA]" />
+                        </div>
+                        <p className="text-[15px] font-semibold text-[#CCF5EE]">
+                          Runner-up
+                        </p>
+                      </div>
+
+                      <p className="text-lg font-bold text-[#CCF5EE]">
+                        1,500{" "}
+                        <span className="text-xs font-semibold text-neutral-300">
+                          BDT
+                        </span>
+                      </p>
+                    </div>
+
+                    {/* Separator */}
+                    <div className="relative mx-auto my-3.5 h-px w-full border-t border-dashed border-[#F5CB7A]/20" />
+
+                    {/* Special note */}
+                    <p className="relative text-center text-[11.5px] text-white leading-relaxed">
+                      <span className="text-[#1AB7AA] font-semibold">
+                        SPECIAL NOTE:
+                      </span>{" "}
+                      All winners will receive exclusive gifts,courses & discounts from our partners.
+                    </p>
+                  </motion.div>
+                </motion.div>
+
                 <motion.div
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.18, duration: 0.35 }}
                   className="grid grid-cols-2 sm:grid-cols-4 gap-3"
                 >
-                  {segment.prizePool && (
-                    <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
-                        <Trophy className="h-4 w-4 text-[#F5CB7A]" />
-                      </div>
-                      <div className="space-y-0.5">
-                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                          Prize Pool
-                        </p>
-                        <p className="text-sm font-semibold text-[#F5CB7A]">
-                          {segment.prizePool}
-                        </p>
-                      </div>
-                    </div>
-                  )}
-
                   {segment.schedule && (
                     <div className="rounded-2xl border border-[#F5CB7A]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#F5CB7A]/10">
@@ -159,7 +262,6 @@ const Cadyssey = () => {
                       </div>
                     </div>
                   )}
-
                   {segment.place && (
                     <div className="rounded-2xl border border-[#1AB7AA]/40 bg-black/45 px-3 py-2.5 flex items-start gap-2">
                       <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-[#1AB7AA]/10">
@@ -175,22 +277,22 @@ const Cadyssey = () => {
                       </div>
                     </div>
                   )}
-
-                {segment.registrationDeadline && (
-                  <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
-                    <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
-                      <Clock className="h-4 w-4 text-red-500" />
+                  {segment.registrationDeadline && (
+                    <div className="rounded-2xl border border-red-500/60 bg-black/45 px-3 py-2.5 flex items-start gap-2">
+                      <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-red-500/10">
+                        <Clock className="h-4 w-4 text-red-500" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
+                          Registration Deadline
+                        </p>
+                        <p className="text-sm font-semibold text-red-500">
+                          {segment.registrationDeadline}
+                        </p>
+                      </div>
                     </div>
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] uppercase tracking-wide text-neutral-300/70">
-                        Registration Deadline
-                      </p>
-                      <p className="text-sm font-semibold text-red-500">
-                        {segment.registrationDeadline}
-                      </p>
-                    </div>
-                  </div>
-                )}                </motion.div>
+                  )}{" "}
+                </motion.div>
 
                 {/* Action buttons */}
                 <motion.div
@@ -200,16 +302,19 @@ const Cadyssey = () => {
                   className="mt-6 flex flex-wrap gap-3 sm:gap-4"
                 >
                   <a
-  href="https://tinyurl.com/CADyssey"   
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
->
-  <BookOpen className="h-4 w-4" />
-  Rule Book
-</a>
+                    href="https://tinyurl.com/CADyssey"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 rounded-xl border border-[#D1BA83]/60 bg-black/50 px-4 py-2.5 text-sm font-semibold text-[#D1BA83] hover:bg-[#D1BA83]/10 transition-colors duration-200 flex items-center justify-center gap-2"
+                  >
+                    <BookOpen className="h-4 w-4" />
+                    Rule Book
+                  </a>
 
-                  <button className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2" onClick={() => window.open(googleFormsLink, "_blank")}>
+                  <button
+                    className="flex-1 rounded-xl bg-gradient-to-r from-[#1AB7AA] to-[#0fa399] px-4 py-2.5 text-sm font-semibold text-white hover:shadow-lg hover:shadow-[#1AB7AA]/50 transition-all duration-200 flex items-center justify-center gap-2"
+                    onClick={() => window.open(googleFormsLink, "_blank")}
+                  >
                     <UserPlus className="h-4 w-4" />
                     Register Now
                   </button>
@@ -291,14 +396,18 @@ const Cadyssey = () => {
                   🎉
                 </motion.div>
 
-                <h2 className="text-3xl font-bold text-[#F5CB7A]">Coming Soon!</h2>
+                <h2 className="text-3xl font-bold text-[#F5CB7A]">
+                  Coming Soon!
+                </h2>
 
                 <p className="text-neutral-300 text-sm leading-relaxed">
-                  The rule book for this segment is being prepared with all the exciting details and guidelines.
+                  The rule book for this segment is being prepared with all the
+                  exciting details and guidelines.
                 </p>
 
                 <p className="text-neutral-400 text-xs">
-                  Check back soon for the complete ruleset and competition guidelines.
+                  Check back soon for the complete ruleset and competition
+                  guidelines.
                 </p>
 
                 <motion.button
